@@ -1,0 +1,244 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  background-image: url(school_background.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Vertical scrolling */
+  max-height: 100vh; 
+}
+
+.app-title {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 2px black;
+  color: #f8ff22;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.button {
+  font-size: 12px;
+  padding: 20px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-button,
+.delete-button,
+.checkAnswer,
+.revealAnswer,
+.resetCard,
+#resetAll,
+#checkScore,
+#resetScore {
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 14px;
+}
+
+.add-button {
+  background-color: #007bff;
+  color: #fff;
+  margin: 0 auto -20px auto;
+  width: 150px;
+}
+
+.delete-button {
+  background-color: #ba2020;
+  color: #fff;
+  margin: 10px auto 20px auto;
+  width: 150px;
+}
+
+.delete-card {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #000;
+}
+
+.checkAnswer {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.revealAnswer {
+  background-color: #dec223;
+  color: #000;
+}
+
+.resetCard,
+#resetScore,
+#resetAll{
+  background-color: #5d5d5d;
+  color: #fff;
+}
+
+
+.checkAnswer,
+.resetCard,
+.revealAnswer {
+  vertical-align: middle;
+}
+
+#checkScore, #resetAll {
+  background-color: #5d5d5d;
+  color: #fff;
+}
+
+#checkScore, #resetScore, .delete-button, #resetAll {
+  height: 30px;
+  font-size: 12px;
+}
+
+.button-group,
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button-group .button,
+.button-row .button {
+  width: 130px;
+  margin: 0 5px;
+}
+
+#resetScore {
+  margin-left: 0;
+}
+
+.flashcards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flashcard {
+  background-image: url('notecard.png');
+  background-size: cover;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 50px 20px 20px;
+  box-shadow: 0 4px 8px rgba(44, 12, 12, 0.1);
+  width: 400px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  position: relative;
+  max-height: 50vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.question,
+.answer {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+.card-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: Arial;
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+}
+
+.flashcard div {
+  margin-bottom: 10px;
+}
+
+.answer,
+.result {
+  margin-top: 10px;
+}
+
+textarea,
+button {
+  margin-top: 10px;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+}
+
+button.checkAnswer,
+button.resetCard,
+button.revealAnswer,
+#checkScore,
+#resetScore,
+#resetAll {
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 10px;
+}
+
+button.checkAnswer,
+button.resetCard,
+button.revealAnswer,
+#checkScore,
+#resetScore,
+#resetAll {
+  color: #fff;
+}
+
+button.checkAnswer:hover,
+button.resetCard:hover,
+button.revealAnswer:hover,
+.add-button:hover,
+.delete-button:hover,
+#checkScore:hover,
+#resetScore:hover,
+#resetAll:hover {
+  filter: brightness(0.9);
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  font-size: 1.1em;
+  -webkit-text-stroke: .5px black;
+  color: #f8ff22;
+}
+
+@media screen and (max-width: 800px) {
+  .flashcard {
+    max-width: 400px;
+    width: 80%;
+  }
+}
