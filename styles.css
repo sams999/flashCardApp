@@ -54,20 +54,22 @@ body {
   width: 100px;
   height: 40px;
   border-radius: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .add-button {
-  background-color: #007bff;
+  background: linear-gradient(to right, #007bff, #0056b3);
   color: #fff;
-  margin: 0 auto -20px auto;
-  width: 150px;
+  width: 200px;
 }
 
 .delete-button {
-  background-color: #ba2020;
+  background: linear-gradient(to right, #9d2929, #730000);
   color: #fff;
-  margin: 10px auto 20px auto;
-  width: 150px;
+  width: 200px;
+  height: 40px;
+  font-size: 12px;
 }
 
 .delete-card {
@@ -80,22 +82,21 @@ body {
 }
 
 .checkAnswer {
-  background-color: #28a745;
+  background: linear-gradient(to right, #28a745, #1b6d33);
   color: #fff;
 }
 
 .revealAnswer {
-  background-color: #dec223;
+  background: linear-gradient(to right, #dec223, #ad891b);
   color: #000;
 }
 
 .resetCard,
 #resetScore,
 #resetAll{
-  background-color: #5d5d5d;
+  background: linear-gradient(to right, #5d5d5d, #404040);
   color: #fff;
 }
-
 
 .checkAnswer,
 .resetCard,
@@ -104,11 +105,11 @@ body {
 }
 
 #checkScore, #resetAll {
-  background-color: #5d5d5d;
+  background: linear-gradient(to right, #5d5d5d, #404040);
   color: #fff;
 }
 
-#checkScore, #resetScore, .delete-button, #resetAll {
+#checkScore, #resetScore, #resetAll {
   height: 30px;
   font-size: 12px;
 }
