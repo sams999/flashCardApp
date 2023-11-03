@@ -10,7 +10,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f8f9fa;
-  background-image: url(school_background.png);
+  background-image: url(blackboard.jpeg);
   background-size: cover;
   overflow: hidden;
 }
@@ -23,7 +23,6 @@ body {
   padding: 20px;
   width: 100%;
   color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow-y: auto; 
   max-height: 100vh; 
 }
@@ -32,7 +31,7 @@ body {
   margin-top: 40px;
   margin-bottom: 10px;
   -webkit-text-stroke: 2px black;
-  color: #f8ff22;
+  color: #e9f02e;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -63,17 +62,16 @@ body {
 }
 
 .add-button {
-  background: linear-gradient(to right, #007bff, #0056b3);
+  background: linear-gradient(to right, #7ab5f3, #0056b3);
   color: #fff;
   width: 200px;
 }
 
 .delete-button {
-  background: linear-gradient(to right, #b32d2d, #790606);
+  background: linear-gradient(to right, #b13939,#680909);
   color: #fff;
   width: 200px;
   height: 40px;
-  font-size: 12px;
 }
 
 .delete-card {
@@ -98,7 +96,7 @@ body {
 .resetCard,
 #resetScore,
 #resetAll{
-  background: linear-gradient(to right, #5d5d5d, #404040);
+  background: linear-gradient(to right, /* #5d5d5d, #404040 */ #76bec7, #195b6d);
   color: #fff;
 }
 
@@ -109,7 +107,7 @@ body {
 }
 
 #checkScore, #resetAll {
-  background: linear-gradient(to right, #5d5d5d, #404040);
+  background: linear-gradient(to right, /* #5d5d5d, #404040 */ #76bec7, #195b6d);
   color: #fff;
 }
 
@@ -146,8 +144,8 @@ body {
   background-image: url('notecard.png');
   background-size: cover;
   border: 1px solid #ccc;
-  border-radius: 8px;
   padding: 50px 20px 20px;
+  border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   width: 400px;
   margin: 0 auto 30px auto;
