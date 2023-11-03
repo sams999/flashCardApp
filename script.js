@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="delete-card">×</div>
             <div class="question">${question}</div>
             <div class="answer" style="display:none;">${answer}</div>
-            <textarea class="userAnswer" rows="3" cols="30" placeholder="Type your answer here"></textarea>
+            <textarea class="userAnswer" rows="3" cols="30" placeholder="Tap here to answer..."></textarea>
             <button class="checkAnswer">Submit Answer</button>
             <button class="revealAnswer" style="display:none;">Reveal Answer</button>
             <div class="result" style="display:none;"></div>
