@@ -1,3 +1,7 @@
+:root {
+  color-scheme: only light;
+}
+
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 0;
