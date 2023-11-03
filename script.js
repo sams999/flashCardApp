@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const checkScoreButton = document.getElementById('checkScore');
     const resetScoreButton = document.getElementById('resetScore');
     const deleteAllButton = document.getElementById('deleteAll');
-    const resetAllButton = document.getElementById('resetAll'); // Added line
+    const resetAllButton = document.getElementById('resetAll');
     const scoreElement = document.createElement('div');
     let cardCounter = 1;
     let correctCount = 0;
@@ -43,11 +43,13 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             cardCounter = 1;
         }
+
+        updateButtonVisibility(); // Call this after loading from localStorage
     }
 
     function createFlashcard(question, answer) {
         const flashcard = document.createElement('div');
-        flashcard.classList.add('flashcard')
+        flashcard.classList.add('flashcard');
         flashcard.innerHTML = `
             <div class="card-number">${cardCounter}</div>
             <div class="delete-card">×</div>
@@ -71,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
             flashcard.remove();
             updateCardNumbers();
             saveFlashcardsToLocalStorage();
+            updateButtonVisibility(); // Call this after deleting a flashcard
         });
 
         checkAnswerButton.addEventListener('click', function() {
@@ -97,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             totalCount++;
             saveFlashcardsToLocalStorage();
+            updateButtonVisibility(); // Call this after checking the answer
         });
 
         revealAnswerButton.addEventListener('click', function() {
@@ -121,12 +125,14 @@ document.addEventListener('DOMContentLoaded', function() {
         cardCounter++;
         updateCardNumbers();
         saveFlashcardsToLocalStorage();
+        updateButtonVisibility(); // Call this after creating a flashcard
     }
 
     function deleteAllFlashcards() {
         flashcardsContainer.innerHTML = '';
         cardCounter = 1;
         saveFlashcardsToLocalStorage();
+        updateButtonVisibility(); // Call this after deleting all flashcards
     }
 
     function updateCardNumbers() {
@@ -237,6 +243,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     }
 
+    function updateButtonVisibility() {
+        const flashcards = flashcardsContainer.querySelectorAll('.flashcard');
+        const checkScoreButton = document.getElementById('checkScore');
+        const resetScoreButton = document.getElementById('resetScore');
+        const deleteAllButton = document.getElementById('deleteAll');
+        const resetAllButton = document.getElementById('resetAll');
+
+        if (flashcards.length > 0) {
+            checkScoreButton.style.display = 'inline-block';
+            resetScoreButton.style.display = 'inline-block';
+            deleteAllButton.style.display = 'inline-block';
+            resetAllButton.style.display = 'inline-block';
+        } else {
+            checkScoreButton.style.display = 'none';
+            resetScoreButton.style.display = 'none';
+            deleteAllButton.style.display = 'none';
+            resetAllButton.style.display = 'none';
+        }
+    }
+
     addCardButton.addEventListener('click', function() {
         const question = prompt('Enter a new question:');
         const answer = prompt('Enter your new answer:');
@@ -254,12 +280,16 @@ document.addEventListener('DOMContentLoaded', function() {
             saveFlashcardsToLocalStorage();
         }
     });
-
+    
     checkScoreButton.addEventListener('click', function() {
-        const percentage = ((correctCount / totalCount) * 100).toFixed(2);
-        alert(`You got ${correctCount} out of ${totalCount} correct, ${percentage}%`);
+        if (totalCount > 0) {
+            const percentage = ((correctCount / totalCount) * 100).toFixed(2);
+            alert(`You got ${correctCount} out of ${totalCount} correct, ${percentage}%`);
+        } else {
+            alert('You haven\'t answered any questions yet.');
+        }
     });
-
+    
     resetScoreButton.addEventListener('click', function() {
         correctCount = 0;
         totalCount = 0;
