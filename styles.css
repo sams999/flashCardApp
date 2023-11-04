@@ -97,6 +97,9 @@ body {
   background: linear-gradient(to right, #dec223, #ad891b);
   color: #000;
 }
+.randomizeCards { 
+  margin-left: 10px;
+}
 
 .resetCard,
 #resetAll, .randomizeCards{
@@ -189,8 +192,11 @@ button {
   box-sizing: border-box;
 }
 
+button.resetCard {
+  margin-top: 10px;
+}
+
 button.checkAnswer,
-button.resetCard,
 button.revealAnswer,
 #checkScore,
 #resetAll,
