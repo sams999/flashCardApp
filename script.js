@@ -249,19 +249,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const resetScoreButton = document.getElementById('resetScore');
         const deleteAllButton = document.getElementById('deleteAll');
         const resetAllButton = document.getElementById('resetAll');
-
+        const randomizeButton = document.querySelector('.randomizeCards'); // Add this line
+    
         if (flashcards.length > 0) {
             checkScoreButton.style.display = 'inline-block';
             resetScoreButton.style.display = 'inline-block';
             deleteAllButton.style.display = 'inline-block';
             resetAllButton.style.display = 'inline-block';
+            randomizeButton.style.display = 'inline-block'; // Add this line
         } else {
             checkScoreButton.style.display = 'none';
             resetScoreButton.style.display = 'none';
             deleteAllButton.style.display = 'none';
             resetAllButton.style.display = 'none';
+            randomizeButton.style.display = 'none'; // Add this line
         }
     }
+    
 
     addCardButton.addEventListener('click', function() {
         const question = prompt('Enter a new question:');
