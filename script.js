@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const flashcardsContainer = document.getElementById('flashcards');
     const addCardButton = document.getElementById('addCard');
     const checkScoreButton = document.getElementById('checkScore');
-    const resetScoreButton = document.getElementById('resetScore');
     const deleteAllButton = document.getElementById('deleteAll');
     const resetAllButton = document.getElementById('resetAll');
     const scoreElement = document.createElement('div');
@@ -246,20 +245,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateButtonVisibility() {
         const flashcards = flashcardsContainer.querySelectorAll('.flashcard');
         const checkScoreButton = document.getElementById('checkScore');
-        const resetScoreButton = document.getElementById('resetScore');
         const deleteAllButton = document.getElementById('deleteAll');
         const resetAllButton = document.getElementById('resetAll');
         const randomizeButton = document.querySelector('.randomizeCards'); // Add this line
     
         if (flashcards.length > 0) {
             checkScoreButton.style.display = 'inline-block';
-            resetScoreButton.style.display = 'inline-block';
             deleteAllButton.style.display = 'inline-block';
             resetAllButton.style.display = 'inline-block';
             randomizeButton.style.display = 'inline-block'; // Add this line
         } else {
             checkScoreButton.style.display = 'none';
-            resetScoreButton.style.display = 'none';
             deleteAllButton.style.display = 'none';
             resetAllButton.style.display = 'none';
             randomizeButton.style.display = 'none'; // Add this line
@@ -292,13 +288,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             alert('You haven\'t answered any questions yet.');
         }
-    });
-    
-    resetScoreButton.addEventListener('click', function() {
-        correctCount = 0;
-        totalCount = 0;
-        updateScore();
-        saveFlashcardsToLocalStorage();
     });
 
     resetAllButton.addEventListener('click', function() {

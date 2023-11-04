@@ -52,13 +52,12 @@ body {
 .revealAnswer,
 .resetCard,
 #resetAll,
-#checkScore,
-#resetScore {
+#checkScore {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 12px;
   border: none;
   width: 100px;
-  height: 40px;
+  height: 30px;
   border-radius: 14px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -69,6 +68,7 @@ body {
   color: #fff;
   width: 200px;
   font-size: 14px;
+  height: 40px;
 }
 
 .delete-button {
@@ -99,7 +99,6 @@ body {
 }
 
 .resetCard,
-#resetScore,
 #resetAll, .randomizeCards{
   background: linear-gradient(to right, /* #5d5d5d, #404040 */ #76bec7, #195b6d);
   color: #fff;
@@ -116,7 +115,7 @@ body {
   color: #fff;
 }
 
-#checkScore, #resetScore, #resetAll, .randomizeCards {
+#checkScore, #resetAll, .randomizeCards {
   height: 30px;
   font-size: 12px;
 }
@@ -132,10 +131,6 @@ body {
 .button-row .button {
   width: 130px;
   margin: 0 5px;
-}
-
-#resetScore {
-  margin-left: 0;
 }
 
 .flashcards {
@@ -198,8 +193,8 @@ button.checkAnswer,
 button.resetCard,
 button.revealAnswer,
 #checkScore,
-#resetScore,
-#resetAll {
+#resetAll,
+.randomizeCards {
   margin-top: 10px;
   margin-right: 10px;
 }
@@ -208,7 +203,6 @@ button.checkAnswer,
 button.resetCard,
 button.revealAnswer,
 #checkScore,
-#resetScore,
 #resetAll {
   color: #fff;
 }
@@ -218,8 +212,8 @@ button.resetCard:hover,
 button.revealAnswer:hover,
 .add-button:hover,
 .delete-button:hover,
+.randomizeCards:hover,
 #checkScore:hover,
-#resetScore:hover,
 #resetAll:hover {
   filter: brightness(0.9);
 }
