@@ -306,4 +306,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     loadFlashcardsFromLocalStorage();
+
+    const randomizeCardsButton = document.querySelector('.randomizeCards');
+
+randomizeCardsButton.addEventListener('click', function() {
+    const flashcards = Array.from(flashcardsContainer.querySelectorAll('.flashcard'));
+    shuffleArray(flashcards);
+
+    flashcardsContainer.innerHTML = '';
+
+    flashcards.forEach(function(flashcard) {
+        flashcardsContainer.appendChild(flashcard);
+    });
+
+    updateCardNumbers();
+    saveFlashcardsToLocalStorage();
+});
+
+// Helper function to shuffle an array (Fisher-Yates shuffle)
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 });

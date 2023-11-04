@@ -48,6 +48,7 @@ body {
 .add-button,
 .delete-button,
 .checkAnswer,
+.randomizeCards,
 .revealAnswer,
 .resetCard,
 #resetAll,
@@ -99,7 +100,7 @@ body {
 
 .resetCard,
 #resetScore,
-#resetAll{
+#resetAll, .randomizeCards{
   background: linear-gradient(to right, /* #5d5d5d, #404040 */ #76bec7, #195b6d);
   color: #fff;
 }
@@ -115,7 +116,7 @@ body {
   color: #fff;
 }
 
-#checkScore, #resetScore, #resetAll {
+#checkScore, #resetScore, #resetAll, .randomizeCards {
   height: 30px;
   font-size: 12px;
 }
