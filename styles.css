@@ -196,13 +196,19 @@ button.resetCard {
   margin-top: 10px;
 }
 
-button.checkAnswer,
-button.revealAnswer,
 #checkScore,
 #resetAll,
 .randomizeCards {
   margin-top: 10px;
   margin-right: 10px;
+}
+
+button.checkAnswer {
+  margin-right: 5px;
+}
+
+button.revealAnswer {
+  margin-left: 5px;
 }
 
 button.checkAnswer,
