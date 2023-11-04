@@ -203,14 +203,12 @@ button.resetCard {
   margin-right: 10px;
 }
 
-button.checkAnswer {
-  margin-right: 5px;
-}
-
+button.checkAnswer, 
 button.revealAnswer {
+  margin-right: 5px;
   margin-left: 5px;
 }
-
+ 
 button.checkAnswer,
 button.resetCard,
 button.revealAnswer,
